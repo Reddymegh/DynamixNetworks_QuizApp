@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container">
+    <!-- Start Screen -->
+    <div id="start-screen">
+      <h2>Welcome to the Quiz App!</h2>
+      <p>Select a category and difficulty level:</p>
+
+      <div class="selectors">
+        <label>Choose Category:</label>
+        <select id="category">
+          <option value="math">Math</option>
+          <option value="webdev">Web Development</option>
+        </select>
+        <br>
+        <label>Choose Difficulty:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+
+      <button onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quiz-screen" class="hidden">
+      <div id="question-container"></div>
+      <div id="progress"></div>
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="result-screen" class="hidden">
+      <h2>Your Score: <span id="score"></span>/5</h2>
+      <button onclick="restartQuiz()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
